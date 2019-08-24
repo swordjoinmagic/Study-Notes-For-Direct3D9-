@@ -213,9 +213,9 @@ int d3d9MessageLoop(
 			// 如果没有消息需要处理,就执行游戏内部循环
 			
 			// 计算帧率
-			float nowTime = (float)timeGetTime();	// 当前时间
+			float nowTime = (float)timeGetTime();	// 当前时间,单位ms
 			// 两次更新之间的间隔时间(以秒计算)
-			float intervalTime = nowTime - lastUpdateTime;
+			float intervalTime = (nowTime - lastUpdateTime) / 1000;
 			p_Display(intervalTime,Device);
 			lastUpdateTime = nowTime;
 		}

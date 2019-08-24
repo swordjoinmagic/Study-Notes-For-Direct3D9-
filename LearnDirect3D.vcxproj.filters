@@ -30,6 +30,15 @@
     <ClInclude Include="d3dFramework.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Sample1_DrawCube.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sample2_Color.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sample3_Light.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -39,6 +48,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="d3dFramework.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample1_DrawCube.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample2_Color.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample3_Light.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
