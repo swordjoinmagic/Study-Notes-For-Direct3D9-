@@ -156,6 +156,8 @@
     <ClInclude Include="Sample1_DrawCube.h" />
     <ClInclude Include="Sample2_Color.h" />
     <ClInclude Include="Sample3_Light.h" />
+    <ClInclude Include="Sample4_TextureMapping.h" />
+    <ClInclude Include="Sample5_AlphaBlend.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -165,6 +167,8 @@
     <ClCompile Include="Sample1_DrawCube.cpp" />
     <ClCompile Include="Sample2_Color.cpp" />
     <ClCompile Include="Sample3_Light.cpp" />
+    <ClCompile Include="Sample4_TextureMapping.cpp" />
+    <ClCompile Include="Sample5_AlphaBlend.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -176,6 +180,7 @@
     <ResourceCompile Include="LearnDirect3D.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Image\29126173.bmp" />
     <Image Include="LearnDirect3D.ico" />
     <Image Include="small.ico" />
   </ItemGroup>

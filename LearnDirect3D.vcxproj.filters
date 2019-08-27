@@ -39,6 +39,12 @@
     <ClInclude Include="Sample3_Light.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Sample4_TextureMapping.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sample5_AlphaBlend.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -59,6 +65,12 @@
     <ClCompile Include="Sample3_Light.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Sample4_TextureMapping.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample5_AlphaBlend.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LearnDirect3D.rc">
@@ -70,6 +82,9 @@
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="LearnDirect3D.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Image\29126173.bmp">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>

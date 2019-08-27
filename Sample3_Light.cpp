@@ -78,13 +78,14 @@ void Sample3::init(IDirect3DDevice9* Device, int Width, int Height) {
 	dir.Diffuse = WHITE;
 	dir.Specular = WHITE * 0.3f;
 	dir.Ambient = WHITE * 0.6f;
-	dir.Direction = D3DXVECTOR3(1.0f,0.0f,0.0f);
+	dir.Direction = D3DXVECTOR3(0,0.0f,1.0f);	
 	Device->SetLight(0,&dir);
 	Device->LightEnable(0,true);
 
 	// 启用高光反射
 	Device->SetRenderState(D3DRS_NORMALIZENORMALS,true);
 	Device->SetRenderState(D3DRS_SPECULARENABLE,true);
+	Device->SetRenderState(D3DRS_CULLMODE, D3DCULL_NONE);
 
 	// 设置投影矩阵
 	D3DXMATRIX proj;
@@ -105,15 +106,17 @@ static float x = 0;
 void Sample3::render(IDirect3DDevice9* Device, float deltaTime) {
 
 	D3DXMATRIX modelMatrix;
-	D3DXMatrixRotationX(&modelMatrix,x);
+	D3DXMatrixRotationY(&modelMatrix,x);
 	x += deltaTime * D3DX_PI/4;
 	if (x >= 6.28) x = 0;
 	Device->SetTransform(D3DTS_WORLD,&modelMatrix);
 
 	D3DXMATRIX view;
-	D3DXMatrixTranslation(
+	D3DXMatrixLookAtLH(
 		&view,
-		0,0,2.0f
+		&D3DXVECTOR3(0,3,-5.0f),
+		&D3DXVECTOR3(0,0,0),
+		&D3DXVECTOR3(0,1,0)
 	);
 	Device->SetTransform(D3DTS_VIEW,&view);
 
@@ -121,7 +124,7 @@ void Sample3::render(IDirect3DDevice9* Device, float deltaTime) {
 	// 将顶点缓冲输入进流中
 	Device->SetStreamSource(0, Pyramid, 0, sizeof(Vertex));
 
-	Device->DrawPrimitive(D3DPT_TRIANGLELIST, 0, 1);
+	Device->DrawPrimitive(D3DPT_TRIANGLELIST, 0, 6);
 }
 
 void Sample3::onDestory() {
