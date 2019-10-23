@@ -45,6 +45,12 @@
     <ClInclude Include="Sample5_AlphaBlend.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Sample6_StencilTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Sample1_ShaderTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -69,6 +75,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Sample5_AlphaBlend.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample6_StencilTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample1_ShaderTest.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

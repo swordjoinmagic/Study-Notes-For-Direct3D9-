@@ -79,11 +79,11 @@ HWND d3d9CreateWindow(
 		0
 	);
 
-	// 显示以及更新窗口
 	if (!hwnd) {
 		MessageBoxA(0,"CreateWindows Failed",0,0);
 		return 0;
 	}
+	// 显示以及更新窗口
 	ShowWindow(hwnd,SW_SHOW);
 	UpdateWindow(hwnd);
 
@@ -137,7 +137,9 @@ D3DPRESENT_PARAMETERS d3d9CreatePP(
 	// 与设备相关的窗口句柄
 	d3dpp.hDeviceWindow = hwnd;
 	d3dpp.Windowed = !fullScreen;
+	// 表示d3d自动应用深度/模板缓冲
 	d3dpp.EnableAutoDepthStencil = true;
+	// 24位精度的深度缓冲
 	d3dpp.AutoDepthStencilFormat = D3DFMT_D24S8;
 	d3dpp.Flags = 0;
 	d3dpp.FullScreen_RefreshRateInHz = D3DPRESENT_RATE_DEFAULT;
@@ -176,6 +178,7 @@ bool d3d9CreateDevice(
 
 	}
 
+	// 如果创建失败,尝试减少深度缓冲区精度
 	if (FAILED(hr)) {
 		d3dpp.AutoDepthStencilFormat = D3DFMT_D16;
 		hr = d3d9->CreateDevice(D3DADAPTER_DEFAULT, deviceType, hwnd, vp, &d3dpp, device);

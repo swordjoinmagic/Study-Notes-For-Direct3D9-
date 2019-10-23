@@ -149,6 +149,10 @@ void Sample5::render(IDirect3DDevice9* Device, float deltaTime) {
 	Device->SetTexture(0,backgroundTex);
 	Device->DrawPrimitive(D3DPT_TRIANGLELIST,0,2);
 
+	// 设置混合因子
+	Device->SetRenderState(D3DRS_SRCBLEND,D3DBLEND_SRCALPHA);
+	Device->SetRenderState(D3DRS_DESTBLEND,D3DBLEND_INVSRCALPHA);
+
 	// 绘制茶杯
 	Device->SetRenderState(D3DRS_ALPHABLENDENABLE,true);
 
@@ -161,7 +165,9 @@ void Sample5::render(IDirect3DDevice9* Device, float deltaTime) {
 	Device->SetRenderState(D3DRS_ALPHABLENDENABLE,false);
 
 
+	
 }
+
 
 void Sample5::onDestory() {
 	Teapot->Release();

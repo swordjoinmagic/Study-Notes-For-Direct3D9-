@@ -154,10 +154,12 @@
     <ClInclude Include="LearnDirect3D.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Sample1_DrawCube.h" />
+    <ClInclude Include="Sample1_ShaderTest.h" />
     <ClInclude Include="Sample2_Color.h" />
     <ClInclude Include="Sample3_Light.h" />
     <ClInclude Include="Sample4_TextureMapping.h" />
     <ClInclude Include="Sample5_AlphaBlend.h" />
+    <ClInclude Include="Sample6_StencilTest.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -165,10 +167,12 @@
     <ClCompile Include="d3dFramework.cpp" />
     <ClCompile Include="LearnDirect3D.cpp" />
     <ClCompile Include="Sample1_DrawCube.cpp" />
+    <ClCompile Include="Sample1_ShaderTest.cpp" />
     <ClCompile Include="Sample2_Color.cpp" />
     <ClCompile Include="Sample3_Light.cpp" />
     <ClCompile Include="Sample4_TextureMapping.cpp" />
     <ClCompile Include="Sample5_AlphaBlend.cpp" />
+    <ClCompile Include="Sample6_StencilTest.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
